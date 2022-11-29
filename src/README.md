@@ -1,0 +1,1 @@
+Test and execute with "ts-node index.ts"

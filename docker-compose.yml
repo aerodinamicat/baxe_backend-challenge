@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+  back_end_challenge:
+    build:
+      context: ./mock
+      dockerfile: Dockerfile
+    ports:
+      - 6789:6789
