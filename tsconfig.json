@@ -1,0 +1,15 @@
+{
+    "ts-node": {
+      "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "esModuleInterop": true
+      }
+    },
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "esModuleInterop": true
+    }
+  }
+  
