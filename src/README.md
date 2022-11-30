@@ -9,4 +9,4 @@
 
 #### To run tests, execute:
 - docker-compose up -d (docker-compose down --rmi local -> To stop and remove built containers)
-- npm run test:watch (Ctrl+C -> To stop)
+- npm run test (Ctrl+C -> To stop)
