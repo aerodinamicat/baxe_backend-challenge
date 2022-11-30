@@ -18,8 +18,8 @@ export async function handler(req: Request, res: Response) {
     })
   }
 
-  let currencyNames = foundBank.currencies.map((currencyId) => fetchedCurrencies.find((item: any) => item.id === currencyId).name)
-  let countryNames = foundBank.countries.map((countryId) => fetchedCountries.find((item: any) => item.id === countryId).name)
+  let currencyNames = foundBank.currencies.map((currencyId: any) => fetchedCurrencies.find((item: any) => item.id === currencyId).name)
+  let countryNames = foundBank.countries.map((countryId: any) => fetchedCountries.find((item: any) => item.id === countryId).name)
 
   return res.status(200).send({
     ...foundBank,

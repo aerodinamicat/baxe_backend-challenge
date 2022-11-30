@@ -6,8 +6,6 @@ describe(`Testing endpoint: 'api/v1/banks/id'`, () => {
   it('Should return currency names and country names from Bank #0', async () => {
     const response = await request.get('/api/v1/banks/0')
 
-    //console.log(response.body)
-
     expect(response.status).toBe(200)
     expect(response.body).toStrictEqual({
       id: 0,
@@ -16,10 +14,9 @@ describe(`Testing endpoint: 'api/v1/banks/id'`, () => {
       currencies: ['EUR', 'RON', 'PLN'],
     })
   })
+
   it('Should return currency names and country names from Bank #1', async () => {
     const response = await request.get('/api/v1/banks/1')
-
-    //console.log(response.body)
 
     expect(response.status).toBe(200)
     expect(response.body).toStrictEqual({
@@ -29,20 +26,18 @@ describe(`Testing endpoint: 'api/v1/banks/id'`, () => {
       currencies: ['USD', 'MXN', 'ARS'],
     })
   })
+
   it('Should return a "Not found" message', async () => {
     const response = await request.get('/api/v1/banks/2')
-
-    //console.log(response.body)
 
     expect(response.status).toBe(404)
     expect(response.body).toStrictEqual({
       message: 'Bank #2 not found',
     })
   })
+
   it('Should return a "#NaN not found" message', async () => {
     const response = await request.get('/api/v1/banks/thisBanksdoesntExists')
-
-    //console.log(response.body)
 
     expect(response.status).toBe(404)
     expect(response.body).toStrictEqual({
