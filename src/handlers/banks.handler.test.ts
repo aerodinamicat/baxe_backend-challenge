@@ -9,19 +9,7 @@ describe(`Testing endpoint: 'api/v1/banks/id'`, () => {
         //console.log(response.body)
 
         expect(response.status).toBe(200)
-        expect(response.body).toStrictEqual({
-            bankCurrencies:[
-                "EUR",
-                "RON",
-                "PLN"
-            ],
-            bankCountries:[
-                "Spain",
-                "Romania",
-                "Poland",
-                "Bulgaria"
-            ],
-          })
+        expect(response.body).toStrictEqual({"id":0,"name":"European bank","countries":["Spain","Romania","Poland","Bulgaria"],"currencies":["EUR","RON","PLN"]})
     })
     it('Should return currencies names and countries names from Bank #1', async () => {
         const response = await request.get('/api/v1/banks/1')
@@ -29,18 +17,7 @@ describe(`Testing endpoint: 'api/v1/banks/id'`, () => {
         //console.log(response.body)
 
         expect(response.status).toBe(200)
-        expect(response.body).toStrictEqual({
-            bankCurrencies:[
-                "USD",
-                "MXN",
-                "ARS"
-            ],
-            bankCountries:[
-                "United States",
-                "Mexico",
-                "Argentina"
-            ],
-        })
+        expect(response.body).toStrictEqual({"id":1,"name":"American bank","countries":["United States","Mexico","Argentina"],"currencies":["USD","MXN","ARS"]})
     })
     it('Should return a "Not found" message', async () => {
         const response = await request.get('/api/v1/banks/2')

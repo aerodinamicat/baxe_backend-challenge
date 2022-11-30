@@ -5,7 +5,7 @@
 
 ##### To start, execute:
 - docker-compose up -d (docker-compose down --rmi local -> To stop and remove built containers)
-- ts-node src/index.ts (Ctrl+C -> To stop)
+- npm run start (Ctrl+C -> To stop)
 
 #### To run tests, execute:
 - docker-compose up -d (docker-compose down --rmi local -> To stop and remove built containers)
